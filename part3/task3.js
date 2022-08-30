@@ -15,7 +15,7 @@ const checkProduct = (product) => {
     })
 }
 
-checkProduct('Latte')
+checkProduct('espresso')
     .then((param)=>console.log(`terdapat produk ${param} di menu`))
     .catch((e)=>console.log(e.message))
 
