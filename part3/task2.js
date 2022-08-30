@@ -11,13 +11,28 @@ const getMonth = (callback) => {
     }, 4000)
 }
 
-
-getMonth((param1, param2)=>{
-    if(param1===null){
-        param2.map((el)=>{
+getMonth((err, res)=>{
+    if(!err){
+        res.map((el)=>{
             console.log(el);
         })
     } else {
-        console.log(new Error('Sorry Data Not Found', []))
+        console.log(err)
     }
 })
+
+
+// const showMonth = (err, res) => {
+//     if
+//     else
+// }
+// param 1 = menentukan getMonth error atau tidak
+// param 2 = menampung data 
+// getMonth((err,result)=>{
+    //     if(err){
+    //         month.map(function(month) {
+    //             console.log(month); 
+    //           })
+    //     }
+    //     console.log(err,result); 
+    // })
