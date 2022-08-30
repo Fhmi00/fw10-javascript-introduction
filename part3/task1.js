@@ -15,9 +15,9 @@ const cekHariKerja = (day) => {
 }
 
 //then catch
-cekHariKerja('sabtu')
-.then((param1)=>console.log(param1))
-.catch((e)=>console.log(e.message))
+// cekHariKerja('sabtu')
+// .then((el)=>console.log(el))
+// .catch((e)=>console.log(e.message))
 /*
     PENJELASAN: 
 
@@ -33,13 +33,13 @@ cekHariKerja('sabtu')
 //try cacth
 async function cekHari(cb) {
     try {
-        const hari = await cb
-        console.log(hari)
+        const day = await cekHariKerja(cb)
+        console.log(day)
     } catch (e) {
         console.log(e.message)
     }
 }
-cekHari(cekHariKerja('sabtu'))
+cekHari('sabtu')
 /*
     PENJELASAN:
 
