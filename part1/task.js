@@ -7,12 +7,6 @@ const biodata = {
     isMarried : false,
     schoolList : [
         {
-            name : 'TK Kartika',
-            yearIn : 2004,
-            yearOut : 2006,
-            major : null
-        },
-        {
             name : 'SD Kentingan No. 79',
             yearIn : 2006,
             yearOut : 2012,
@@ -47,12 +41,12 @@ const biodata = {
     ],
     interestInCoding : true
 };
-// console.log(biodata);
+console.log(biodata);
 
 
 // ---TASK 2---
 
-const mtk = "85";
+const mtk = 80;
 const bIndo = 75;
 const bIng = 75;
 const ipa = 80;
@@ -61,7 +55,7 @@ let rataRata;
 
 if(typeof mtk === "number" && typeof bIndo === "number" && typeof bIng === "number" && typeof ipa === "number") {
     rataRata = (mtk + bIndo + bIng + ipa)/4
-    console.log('Rata-rata = ' + rataRata);
+    // console.log('Rata-rata = ' + rataRata);
 }else{
     console.log('invalid value!!');
 }
@@ -80,27 +74,35 @@ if(grade>=90 && grade<=100) {
 }else{
     grade = "nilai yang anda masukkan salah"
 };
-console.log('Grade = ' + grade);
+// console.log('Grade = ' + grade);
 
 
 // ---TASK 3---
 
-const printSquare = 5;
+const printSquare = 4;
 let s = '';
 
-for(i = 1; i <= printSquare; i++) {
-    for(b = 1; b <= printSquare; b++) {
-        if(i == 1 || i == printSquare) {
-            s += '* '
-        }else {
-            if(b == 1 || b == printSquare) {
-                s += '* '
-            }else{
-                s += '  '
-            }
+if(typeof printSquare != "number") {
+    console.log("Data must be a number!!");
+} else{
+    if(printSquare <= 0) {
+        console.log("Number must greater than 0!!");
+    } else{
+        for(i = 1; i <= printSquare; i++) {
+            for(b = 1; b <= printSquare; b++) {
+                if(i == 1 || i == printSquare) {
+                    s += '* '
+                }else {
+                    if(b == 1 || b == printSquare) {
+                        s += '* '
+                    }else{
+                        s += '  '
+                    }
+                }
+            } 
+            s += '\n'
         }
-    } 
-    s += '\n'
+    }
 }
 
 // console.log(s);
@@ -130,4 +132,5 @@ let newData = {...data, name: "fahmi", email: "ifahmi5555@gmail.com", hobby: ["M
 
 // console.log(newData);
 
+// ---TASK 4 B---
 let {street, city} = data.address
